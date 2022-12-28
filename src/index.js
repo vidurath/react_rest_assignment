@@ -6,12 +6,16 @@ import Search from "./pages/Search/Search";
 import Login from "./pages/Login/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Protected from "./components/Protected";
+import Public from "./components/Public";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Login />}></Route>
+      <Route path="/" element={<Public />}>
+        <Route path="/" element={<Login />}></Route>
+      </Route>
+
       <Route path="/search" element={<Protected />}>
         <Route path="/search" element={<Search />}></Route>
       </Route>
