@@ -29,9 +29,9 @@ class Search extends React.Component {
 
   render() {
     const { userList, searchfield } = this.state;
-    const filteredUser = userList.filter((user) => {
-      return user.email.toLowerCase().includes(searchfield.toLowerCase());
-    });
+    const filteredUser = userList.filter(
+      (u) => u.id === parseInt(searchfield, 10)
+    );
     return (
       <>
         <div className="container">

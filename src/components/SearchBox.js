@@ -8,7 +8,7 @@ const SearchBox = ({ searchfield, searchChange }) => {
         name="txtSearch"
         className="form-control"
         type="search"
-        placeholder="Search email"
+        placeholder="Enter Id"
         onChange={searchChange}
       />
     </div>
